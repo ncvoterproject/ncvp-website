@@ -1,0 +1,299 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  /* minimal padding */
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: none;
+  /* Removed shadow */
+}
+
+.nav-logo img {
+  height: clamp(50px, 6vw, 90px);
+  /* Slightly reduced max to prevent header inflation */
+  width: auto;
+  display: block;
+  /* Removes inline-block whitespace */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.nav-links a.btn-donate {
+  background-color: white;
+  color: var(--primary-red);
+  border: 2px solid var(--primary-red);
+}
+
+.nav-links a.btn-donate:hover {
+  background-color: var(--primary-red);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+}
+
+/* Hero Styles */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 10vh;
+  /* Visually lift the centered content slightly */
+}
+
+.hero-background-blur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.15) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  max-width: 900px;
+  margin: 0 auto 8rem;
+  /* Even more distance to buttons */
+  line-height: 1.5;
+  /* Increased line spacing */
+  color: var(--text-dark);
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+
+.hero-btns .btn {
+  padding: 1.25rem 3.5rem;
+  /* Larger touch targets */
+  font-size: 1.25rem;
+}
+
+/* Banner Container (Below Fold) */
+.hero-banner-container {
+  width: 100%;
+  background: #f3f4f6;
+}
+
+.hero-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 400px;
+  /* Restored to 400px or whatever preferred */
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Section */
+/* About Section */
+.about {
+  padding: 8rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr auto 1fr;
+  /* shifted further right */
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-divider {
+  width: 5px;
+  background-color: #a855f7;
+  border-radius: 5px;
+  height: 80%;
+  /* Don't stretch full height */
+  align-self: center;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.about-content p {
+  color: var(--text-light);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  padding-right: 0;
+  border-right: none;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.member-info h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.member-info p {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* Bottom CTA */
+.bottom-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 4rem 0;
+}
+
+.disclaimer {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 5rem 2rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-col h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-col ul li a {
+  color: #d1d5db;
+  font-size: 0.9375rem;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+.footer-contact p {
+  color: #d1d5db;
+  font-size: 0.9375rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about-divider {
+    display: none;
+  }
+
+  .about-content p {
+    border-right: none;
+    border-bottom: 4px solid #d1d5db;
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+    /* In a real prototype, add a burger menu */
+  }
+
+  .hero-btns,
+  .bottom-btns {
+    flex-direction: column;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
