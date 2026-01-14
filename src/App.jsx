@@ -154,9 +154,9 @@ function App() {
             </div>
             <div className="footer-col footer-contact">
               <h3>Contact</h3>
-              <p>3822 Haworth Dr</p>
+              <p>3622 Haworth Dr</p>
               <p>Raleigh, NC 27609</p>
-              <p>(919) 782-4411</p>
+              <p>919-351-8800</p>
               <p>info@ncvoterproject.org</p>
             </div>
           </div>
