@@ -83,7 +83,7 @@
   left: 55%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(225, 29, 72, 0.4) 0%, rgba(225, 29, 72, 0) 70%);
+  background: radial-gradient(circle, rgba(215, 57, 37, 0.4) 0%, rgba(215, 57, 37, 0) 70%);
 }
 
 .blob-2 {
@@ -111,14 +111,13 @@
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  max-width: 900px;
-  margin: 0 auto 8rem;
-  /* Even more distance to buttons */
-  line-height: 1.5;
-  /* Increased line spacing */
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  line-height: 1.1;
   color: var(--text-dark);
+  letter-spacing: 0.02em;
 }
 
 .hero-btns {
@@ -190,54 +189,97 @@
   border-right: none;
 }
 
-.team {
+.about-actions {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.team-member {
+.action-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  text-align: left;
 }
 
-.member-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.action-card:hover {
+  transform: translateX(10px);
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.action-card-red:hover {
+  border-color: var(--primary-red);
+}
+
+.action-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
 
-.member-info h4 {
+.action-card-blue .action-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.action-card-red .action-icon {
+  background: #fef2f2;
+  /* Light pastel red/orange */
+  color: var(--primary-red);
+}
+
+.action-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.action-info h4 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.25rem;
+  color: var(--text-dark);
 }
 
-.member-info p {
-  font-size: 0.875rem;
+.action-info p {
+  font-size: 0.9375rem;
   color: var(--text-light);
+  line-height: 1.4;
 }
 
 /* Bottom CTA */
 .contact-section {
   padding: 4rem 0;
   margin-bottom: 2rem;
+  background: white;
 }
 
 .contact-card {
-  background: white;
+  background:
+    linear-gradient(rgba(120, 113, 108, 0.07), rgba(120, 113, 108, 0.07)),
+    /* Warmer, lighter stone wash */
+    radial-gradient(at 10% 90%, rgba(168, 162, 158, 0.22) 0%, transparent 60%),
+    /* Warmer gray in bottom-left */
+    radial-gradient(at 0% 100%, rgba(251, 146, 60, 0.05) 0%, transparent 70%),
+    radial-gradient(at 30% 20%, rgba(215, 57, 37, 0.04) 0%, transparent 60%),
+    radial-gradient(at 60% 80%, rgba(167, 139, 250, 0.04) 0%, transparent 70%),
+    radial-gradient(at 100% 0%, rgba(34, 211, 238, 0.04) 0%, transparent 70%),
+    #fafaf9;
+  /* Lighter, warmer neutral base */
   border-radius: 24px;
-  padding: 2.5rem 3.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-  border: 1px solid #f3f4f6;
+  padding: 2.5rem 4rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.03), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(0, 0, 0, 0.03);
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -254,29 +296,30 @@
 .contact-subtitle {
   text-align: center;
   color: var(--text-light);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 1.125rem;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 0.875rem;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 0.875rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  background: #f9fafb;
+  background: white;
+  /* Changed to white for better contrast on the gradient card */
   font-family: inherit;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -291,10 +334,10 @@
 }
 
 .contact-form .btn {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   width: fit-content;
   min-width: 250px;
-  padding: 1rem 3.5rem;
+  padding: 0.75rem 3rem;
   font-size: 1.125rem;
   align-self: center;
 }
