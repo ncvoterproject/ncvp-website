@@ -320,11 +320,32 @@
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background: white;
-  /* Changed to white for better contrast on the gradient card */
   font-family: inherit;
   font-size: 1rem;
-  color: var(--text-light);
+  color: var(--text-dark);
+  /* Color for actual input */
   transition: all 0.2s ease;
+}
+
+/* Placeholder color for inputs and textareas */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Gray color for the unselected/placeholder state of the dropdown */
+.form-group select:invalid {
+  color: #9ca3af;
+}
+
+/* Color for the options inside the dropdown */
+.form-group select option {
+  color: var(--text-dark);
+}
+
+/* Specifically style the placeholder option to stay gray */
+.form-group select option[value=""] {
+  color: #9ca3af;
 }
 
 .form-group select {

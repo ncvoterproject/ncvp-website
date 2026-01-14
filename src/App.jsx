@@ -116,7 +116,7 @@ function App() {
                   </div>
                   <div className="form-group">
                     <select name="subject" required defaultValue="">
-                      <option value="">Select a Subject</option>
+                      <option value="" disabled hidden>Select a Subject</option>
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Media Inquiry">Media Inquiry</option>
                       <option value="Volunteer Opportunity">Volunteer Opportunity</option>
