@@ -58,7 +58,7 @@ function App() {
         <div className="about-content">
           <h2>About us.</h2>
           <p>
-            Our mission is to build a more inclusive and representative democracy in North Carolina by expanding access to the ballot box for historically marginalized and underrepresented communities. At our core, we are an evidence-based organization experimenting with techniques to improve voter participation. We envision a state where every eligible voter—regardless of race, zip code, or socioeconomic status—has the resources and protection needed to exercise their fundamental right to vote. By innovating traditional voter registration methods, we seek to dismantle systemic barriers and provide direct education and advocacy to North Carolinians who are most underrepresented in our electoral system. We Educate, Register, and Empower North Carolinians to vote through text campaigns, social media campaigns, in person events, and the Future Voters Network high school program.
+            Our mission is to build a more inclusive and representative democracy in North Carolina by expanding access to the ballot box for historically marginalized and underrepresented communities. At our core, we are an evidence-based organization experimenting with techniques to improve voter participation. We envision a state where every eligible voter—regardless of race, zip code, or socioeconomic status— exercises their fundamental right to vote.
           </p>
         </div>
         <div className="about-divider"></div>
