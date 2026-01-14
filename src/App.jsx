@@ -20,7 +20,12 @@ function App() {
 
       {/* Hero Section */}
       <header className="hero" id="home">
-        <div className="hero-background-blur"></div>
+        <div className="hero-blobs">
+          <div className="blob blob-1"></div>
+          <div className="blob blob-2"></div>
+          <div className="blob blob-3"></div>
+          <div className="blob blob-4"></div>
+        </div>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', flex: 1 }}>
           <div className="hero-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
             <h1>Building a more inclusive democracy by empowering every voice at the ballot box</h1>
@@ -125,7 +130,7 @@ function App() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2024 North Carolina Voter Project. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} North Carolina Voter Project. All rights reserved.</p>
           </div>
         </div>
       </footer>

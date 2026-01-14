@@ -60,16 +60,54 @@
   /* Visually lift the centered content slightly */
 }
 
-.hero-background-blur {
+.hero-blobs {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  /* Slightly sharper to keep color intensity */
+  opacity: 0.9;
+}
+
+.blob-1 {
+  top: 15%;
+  left: 55%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(225, 29, 72, 0.15) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
-  filter: blur(80px);
-  z-index: -1;
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.4) 0%, rgba(225, 29, 72, 0) 70%);
+}
+
+.blob-2 {
+  top: 35%;
+  left: 15%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0) 70%);
+}
+
+.blob-3 {
+  top: 45%;
+  left: 45%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.4) 0%, rgba(251, 146, 60, 0) 70%);
+}
+
+.blob-4 {
+  top: 25%;
+  left: 35%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(168, 85, 247, 0) 70%);
 }
 
 .hero h1 {
