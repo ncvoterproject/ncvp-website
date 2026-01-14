@@ -38,7 +38,7 @@ function App() {
         </div>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', flex: 1 }}>
           <div className="hero-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
-            <h1>NCVP is a nonpartisan organization dedicated to identifying and using cost-effective evidence-based methods to <span>increase voter participation in North Carolina.</span></h1>
+            <h1>NCVP is a nonpartisan organization dedicated to identifying and using cost-effective methods to <span>increase voter participation in North Carolina.</span></h1>
             <div className="hero-btns">
               <a href="#contact-form" className="btn btn-blue">Contact Us</a>
               <a href="https://secure.ngpvan.com/kWG5AkQWTEyPe-n5a6irCA2" className="btn btn-red" target="_blank" rel="noopener noreferrer">Donate</a>
@@ -58,7 +58,7 @@ function App() {
         <div className="about-content">
           <h2>About us.</h2>
           <p>
-            Our mission is to build a more inclusive and representative democracy in North Carolina by expanding access to the ballot box for historically marginalized and underrepresented communities. At our core, we are an evidence-based organization experimenting with techniques to improve voter participation. We envision a state where every eligible voter—regardless of race, zip code, or socioeconomic status— exercises their fundamental right to vote.
+            Our mission is to build a more inclusive and representative democracy in North Carolina by expanding access to the ballot box for historically marginalized and underrepresented communities. At our core, we are an organization experimenting with techniques to improve voter participation. We envision a state where every eligible voter—regardless of race, zip code, or socioeconomic status— exercises their fundamental right to vote.
           </p>
         </div>
         <div className="about-divider"></div>
