@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import logo from './assets/ncvp.logo.png';
+import banner from './assets/ncvp-banner.png';
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
         <div className="nav-links">
           <a href="#">Home</a>
           <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
-          <a href="#donate" className="btn btn-donate">Donate</a>
+          <a href="#contact-form">Contact</a>
+          <a href="https://secure.ngpvan.com/kWG5AkQWTEyPe-n5a6irCA2" className="btn btn-donate" target="_blank" rel="noopener noreferrer">Donate</a>
         </div>
       </nav>
 
@@ -30,8 +31,8 @@ function App() {
           <div className="hero-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
             <h1>Building a more inclusive democracy by empowering every voice at the ballot box</h1>
             <div className="hero-btns">
-              <a href="#contact" className="btn btn-blue">Contact Us</a>
-              <a href="#donate" className="btn btn-red">Donate</a>
+              <a href="#contact-form" className="btn btn-blue">Contact Us</a>
+              <a href="https://secure.ngpvan.com/kWG5AkQWTEyPe-n5a6irCA2" className="btn btn-red" target="_blank" rel="noopener noreferrer">Donate</a>
             </div>
           </div>
         </div>
@@ -39,7 +40,7 @@ function App() {
 
       <div className="hero-banner-container">
         <div className="hero-banner">
-          <span>[ Placeholder Banner Image ]</span>
+          <img src={banner} alt="NCVP Banner" />
         </div>
       </div>
 
@@ -84,10 +85,38 @@ function App() {
 
       {/* Bottom CTA and Disclaimer */}
       <div className="container">
-        <div className="bottom-btns">
-          <a href="#contact" className="btn btn-outline btn-outline-blue">Contact Us</a>
-          <a href="#donate" className="btn btn-outline btn-outline-red">Donate</a>
-        </div>
+        <section className="contact-section" id="contact-form">
+          <div className="contact-card">
+            <h2>Contact Us</h2>
+            <p className="contact-subtitle">Have questions or want to get involved? Send us a message.</p>
+            <form className="contact-form" onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+              const name = formData.get('name');
+              const subject = formData.get('subject');
+              const body = formData.get('message');
+              const mailtoLink = `mailto:info@ncvoterproject.org,media@ncvoterproject.org,volunteer@ncvoterproject.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name}\n\n${body}`)}`;
+              window.location.href = mailtoLink;
+            }}>
+              <div className="form-row">
+                <div className="form-group">
+                  <input type="text" name="name" placeholder="Full Name" required />
+                </div>
+                <div className="form-group">
+                  <input type="email" name="email" placeholder="Email Address" required />
+                </div>
+              </div>
+              <div className="form-group">
+                <input type="text" name="subject" placeholder="Subject" required />
+              </div>
+              <div className="form-group">
+                <textarea name="message" placeholder="Message" rows="4" required></textarea>
+              </div>
+              <button type="submit" className="btn btn-blue">Send Message</button>
+            </form>
+          </div>
+        </section>
+
         <p className="disclaimer">
           NC Voter is brought to you by Democracy NC, a nonpartisan organization that uses research, organizing,
           and advocacy to strengthen democratic structures, build power among disenfranchised communities,
@@ -110,7 +139,7 @@ function App() {
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#work">Our Work</a></li>
                 <li><a href="#resources">Resources</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact-form">Contact</a></li>
               </ul>
             </div>
             <div className="footer-col footer-contact">
