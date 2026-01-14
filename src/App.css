@@ -118,18 +118,6 @@
   line-height: 1.25;
   color: #000000;
   letter-spacing: -0.01em;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  column-gap: 0.25em;
-  row-gap: 0.1em;
-}
-
-.hero-logo-inline {
-  height: clamp(1.8rem, 3.5vw, 3rem);
-  width: auto;
-  vertical-align: middle;
 }
 
 .hero-btns {
