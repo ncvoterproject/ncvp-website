@@ -133,7 +133,7 @@ function App() {
         </section>
 
         <p className="disclaimer">
-          North Carolina Voter Project (NCVP) is a nonpartisan, nonprofit organization that uses research, evidence-based data, organizing, and advocacy to strengthen democratic structures, build civic efficacy among disenfranchised communities, and inspire confidence in a democratic political process that works for all. North Carolina Voter Project is a 501(c)(3) nonprofit organization. Contributions are tax-deductible to the extent allowed by law.
+          North Carolina Voter Project (NCVP) is a nonpartisan, nonprofit organization that uses research, evidence-based data, organizing, and advocacy to strengthen democratic structures, build civic efficacy among disenfranchised communities, and inspire confidence in a democratic political process that works for all.North Carolina Voter Project is a 501(c)(3) nonprofit organization. Contributions are tax-deductible.
         </p>
       </div>
 
