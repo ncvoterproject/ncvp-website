@@ -115,7 +115,12 @@ function App() {
                     </div>
                   </div>
                   <div className="form-group">
-                    <input type="text" name="subject" placeholder="Subject" required />
+                    <select name="subject" required defaultValue="">
+                      <option value="">Select a Subject</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Media Inquiry">Media Inquiry</option>
+                      <option value="Volunteer Opportunity">Volunteer Opportunity</option>
+                    </select>
                   </div>
                   <div className="form-group">
                     <textarea name="message" placeholder="Message" rows="3" required></textarea>
@@ -138,7 +143,7 @@ function App() {
           <div className="footer-grid">
             <div className="footer-col">
               <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>NC Voter Project</h2>
-              <p style={{ color: '#9ca3af', fontSize: '0.875rem' }}>Amplifying unrepresented voices in North Carolina elections.</p>
+
             </div>
             <div className="footer-col">
               <h3>Navigation</h3>
