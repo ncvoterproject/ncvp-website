@@ -111,13 +111,23 @@
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 800;
-  max-width: 1000px;
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  /* Slightly smaller to handle the length */
+  font-weight: 500;
+  /* Lighter weight for the bulk text */
+  max-width: 1100px;
   margin: 0 auto 4rem;
-  line-height: 1.1;
+  line-height: 1.25;
+  /* More breathing room for a long sentence */
   color: var(--text-dark);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+}
+
+.hero h1 span {
+  font-weight: 800;
+  /* Heavy weight for the impact phrase */
+  color: var(--primary-red);
+  /* Using the brand red for emphasis */
 }
 
 .hero-btns {

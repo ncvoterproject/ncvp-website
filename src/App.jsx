@@ -38,7 +38,7 @@ function App() {
         </div>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', flex: 1 }}>
           <div className="hero-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
-            <h1>Building a more inclusive democracy by empowering every voice at the ballot box</h1>
+            <h1>NCVP is a nonpartisan organization dedicated to identifying and using cost-effective evidence-based methods to <span>increase voter participation in North Carolina.</span></h1>
             <div className="hero-btns">
               <a href="#contact-form" className="btn btn-blue">Contact Us</a>
               <a href="https://secure.ngpvan.com/kWG5AkQWTEyPe-n5a6irCA2" className="btn btn-red" target="_blank" rel="noopener noreferrer">Donate</a>
