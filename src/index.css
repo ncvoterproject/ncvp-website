@@ -19,7 +19,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: clamp(50px, 6vw, 90px);
   /* Dynamically matches the navbar height to prevent banner bleed */
-  font-size: 105%;
+  font-size: 110%;
 }
 
 * {
