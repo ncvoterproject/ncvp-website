@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import logo from './assets/ncvp.logo.png';
 import banner from './assets/ncvp-banner.png';
+import capitolBanner from './assets/nc-capitol-hq.jpg';
 
 function App() {
   const [submitted, setSubmitted] = React.useState(false);
@@ -47,7 +48,14 @@ function App() {
         </div>
       </header>
 
-      <div className="hero-banner-container">
+      <div className="hero-banner-container capitol-overlay">
+        <div className="hero-banner">
+          <img src={capitolBanner} alt="NC Capitol Banner" />
+        </div>
+        <div className="blur-seam"></div>
+      </div>
+
+      <div className="hero-banner-container bottom-banner">
         <div className="hero-banner">
           <img src={banner} alt="NCVP Banner" />
         </div>
@@ -58,7 +66,7 @@ function App() {
         <div className="about-content">
           <h2>About us.</h2>
           <p>
-            Our mission is to build a more inclusive and representative democracy in North Carolina by expanding access to the ballot box for historically marginalized and underrepresented communities. At our core, we are an organization experimenting with techniques to improve voter participation. We envision a state where every eligible voter—regardless of race, zip code, or socioeconomic status— exercises their fundamental right to vote.
+            Our mission is to build a more inclusive and representative democracy in North Carolina by expanding access to the ballot box, particularly for historically marginalized and underrepresented communities. At our core, we are a cost-effective and evidence-based organization experimenting with techniques to improve voter participation. We envision a state where every eligible voter—regardless of race, zip code, or socioeconomic status— exercises their fundamental right to vote.
           </p>
         </div>
         <div className="about-divider"></div>
@@ -154,8 +162,8 @@ function App() {
             </div>
             <div className="footer-col footer-contact">
               <h3>Contact</h3>
-              <p>3622 Haworth Dr</p>
-              <p>Raleigh, NC 27609</p>
+              <p>P.O. Box 30067</p>
+              <p>Raleigh, NC 27622</p>
               <p>919-351-8800</p>
               <p>info@ncvoterproject.org</p>
             </div>

@@ -111,7 +111,7 @@
 }
 
 .hero h1 {
-  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 800;
   max-width: 1150px;
   margin: 0 auto 3rem;
@@ -137,6 +137,40 @@
 .hero-banner-container {
   width: 100%;
   background: white;
+  position: relative;
+}
+
+.capitol-overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* Blue gradient matching the banner below (using var --primary-blue which is #3b82f6) */
+  background: linear-gradient(to top,
+      rgba(59, 130, 246, 1.0) 0%,
+      rgba(59, 130, 246, 0.95) 8%,
+      rgba(59, 130, 246, 0.8) 18%,
+      rgba(59, 130, 246, 0.5) 35%,
+      rgba(59, 130, 246, 0.2) 60%,
+      rgba(59, 130, 246, 0) 95%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.blur-seam {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  mask-image: linear-gradient(to top, black 10%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 10%, transparent 100%);
+  z-index: 5;
+  pointer-events: none;
 }
 
 .hero-banner {
@@ -153,6 +187,13 @@
   width: 100%;
   height: auto;
   display: block;
+}
+
+.bottom-banner {
+  padding-bottom: 50px;
+  /* Extends the banner downwards */
+  background-color: var(--primary-blue);
+  /* Fills the extended area with matching blue */
 }
 
 /* About Section */
